@@ -30,12 +30,12 @@ public class EmailService {
 		
 		MimeMessageHelper mm= new MimeMessageHelper(createMimeMessage,true);//this will throw exception
 		
-		mm.setFrom("nairakhilrs45@gmail.com");
-		mm.setTo("nairakhilashok@gmail.com");
+		mm.setFrom("nairakh5@gmail.com");
+		mm.setTo("nair56@gmail.com");
 		mm.setText("Hey this is a test email as i have implemented the email from spring boot, Thanks for ur understanding and support!");
 		mm.setSubject("This is a dummy email");
 		
-		FileSystemResource fr= new FileSystemResource(new File("C:\\Users\\158250\\EmailSpring\\capture.png"));
+		FileSystemResource fr= new FileSystemResource(new File("C:\\Users\\158250\\EmailSpring\\captur.png"));
 		mm.addAttachment(Objects.requireNonNull(fr.getFilename()),fr);
 		
 		javaMailSender.send(createMimeMessage);
